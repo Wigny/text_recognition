@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1049652846364",
+    "firebase_url": "https://reconhecimento-de-textos.firebaseio.com",
+    "project_id": "reconhecimento-de-textos",
+    "storage_bucket": "reconhecimento-de-textos.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1049652846364:android:e66a8a2e47e2b0c6bda4d9",
+        "android_client_info": {
+          "package_name": "dev.wigny.text_recognition"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1049652846364-cfb61r42i6hk8o0lqrdmni7ldkogg45a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0V8JryQXVp7gB_dU7ai61sAu8-lKmrT8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1049652846364-cfb61r42i6hk8o0lqrdmni7ldkogg45a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
