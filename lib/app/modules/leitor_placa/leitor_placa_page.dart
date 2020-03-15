@@ -26,7 +26,7 @@ class _LeitorPlacaPageState
         builder: (_) => CameraMlVision<VisionText>(
           detector: controller.textRecognizer.processImage,
           onResult: (VisionText visionText) {
-            if (!mounted || controller.detected) {
+            if (!mounted) {
               return;
             }
             controller.setText(visionText);

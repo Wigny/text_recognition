@@ -10,9 +10,6 @@ class LeitorPlacaController = _LeitorPlacaControllerBase
 abstract class _LeitorPlacaControllerBase with Store {
   final TextRecognizer textRecognizer;
 
-  @observable
-  bool detected = false;
-
   _LeitorPlacaControllerBase(this.textRecognizer);
 
   @action
@@ -23,7 +20,6 @@ abstract class _LeitorPlacaControllerBase with Store {
     for (TextBlock block in visionText.blocks) {
       for (TextLine line in block.lines) {
         if (antigo.hasMatch(line.text) || mercosul.hasMatch(line.text)) {
-          detected = true;
           Modular.to.pop(line.text);
         }
       }

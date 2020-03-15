@@ -12,8 +12,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends ModularState<HomePage, HomeController> {
-  //use 'controller' variable to access controller
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,9 +23,9 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
         children: <Widget>[
           RaisedButton(
             onPressed: () async {
-              Modular.to.pushNamed('/scan').then(
-                    (v) => controller.result = v,
-                  );
+              Modular.to
+                  .pushNamed('/scan')
+                  .then((res) => controller.result = (res != null) ? res : '');
             },
             child: Text('Escanear'),
           ),
