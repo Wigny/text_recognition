@@ -1,0 +1,5 @@
+lib/app/modules/leitor_placa/leitor_placa_module.dart
+lib/app/modules/leitor_placa/leitor_placa_page.dart
+test/app/modules/leitor_placa/leitor_placa_page_test.dart
+lib/app/modules/leitor_placa/leitor_placa_controller.dart
+test/app/modules/leitor_placa/leitor_placa_controller_test.dart

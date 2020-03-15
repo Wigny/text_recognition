@@ -1,4 +1,3 @@
-import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
@@ -22,34 +21,29 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
         title: Text(widget.title),
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          Observer(
-            builder: (BuildContext context) => Container(
-              width: double.infinity,
-              height: 600,
-              child: controller.pronto
-                  ? CameraPreview(controller.cameraController)
-                  : Center(
-                      child: CircularProgressIndicator(),
-                    ),
-            ),
+          RaisedButton(
+            onPressed: () async {
+              Modular.to.pushNamed('/scan').then(
+                    (v) => controller.result = v,
+                  );
+            },
+            child: Text('Escanear'),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Observer(
-              builder: (_) => RaisedButton(
-                onPressed: () => controller.pronto ? controller.teste() : null,
-                child: Text("Capturar"),
+            child: Container(
+              width: double.infinity,
+              child: Observer(
+                builder: (_) => Text(
+                  controller.result,
+                  style: TextStyle(
+                    fontSize: 48,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
               ),
-            ),
-          ),
-          Observer(
-            builder: (_) => Container(
-              child: controller.loading
-                  ? CircularProgressIndicator()
-                  : Center(
-                      child: Text(controller.textResult),
-                    ),
             ),
           ),
         ],

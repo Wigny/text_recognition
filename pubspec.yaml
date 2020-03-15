@@ -17,10 +17,10 @@ environment:
   sdk: ">=2.1.0 <3.0.0"
 
 dependencies:
+  flutter_camera_ml_vision: ^2.2.5
   uuid: ^2.0.4
   path_provider: ^1.6.5
   firebase_ml_vision: ^0.9.3+8
-  camera: ^0.5.7+4
   dio: ^3.0.9
   flutter_mobx: ^1.0.1
   mobx: ^1.0.2+2

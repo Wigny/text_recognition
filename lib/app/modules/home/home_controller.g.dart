@@ -9,44 +9,26 @@ part of 'home_controller.dart';
 // ignore_for_file: non_constant_identifier_names, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$HomeController on _HomeControllerBase, Store {
-  final _$prontoAtom = Atom(name: '_HomeControllerBase.pronto');
+  final _$resultAtom = Atom(name: '_HomeControllerBase.result');
 
   @override
-  bool get pronto {
-    _$prontoAtom.context.enforceReadPolicy(_$prontoAtom);
-    _$prontoAtom.reportObserved();
-    return super.pronto;
+  String get result {
+    _$resultAtom.context.enforceReadPolicy(_$resultAtom);
+    _$resultAtom.reportObserved();
+    return super.result;
   }
 
   @override
-  set pronto(bool value) {
-    _$prontoAtom.context.conditionallyRunInAction(() {
-      super.pronto = value;
-      _$prontoAtom.reportChanged();
-    }, _$prontoAtom, name: '${_$prontoAtom.name}_set');
-  }
-
-  final _$loadingAtom = Atom(name: '_HomeControllerBase.loading');
-
-  @override
-  bool get loading {
-    _$loadingAtom.context.enforceReadPolicy(_$loadingAtom);
-    _$loadingAtom.reportObserved();
-    return super.loading;
-  }
-
-  @override
-  set loading(bool value) {
-    _$loadingAtom.context.conditionallyRunInAction(() {
-      super.loading = value;
-      _$loadingAtom.reportChanged();
-    }, _$loadingAtom, name: '${_$loadingAtom.name}_set');
+  set result(String value) {
+    _$resultAtom.context.conditionallyRunInAction(() {
+      super.result = value;
+      _$resultAtom.reportChanged();
+    }, _$resultAtom, name: '${_$resultAtom.name}_set');
   }
 
   @override
   String toString() {
-    final string =
-        'pronto: ${pronto.toString()},loading: ${loading.toString()}';
+    final string = 'result: ${result.toString()}';
     return '{$string}';
   }
 }
